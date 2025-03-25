@@ -1,0 +1,30 @@
+private:
+    vector<int> computeLongestPrefixSuffix(string pattern) {
+        // Array to store the longest proper prefix which is also a suffix
+        vector<int> lps(pattern.length(), 0);
+
+        // Initialize tracking variables for prefix and current position
+        for (int current = 1, prefixLength = 0; current < pattern.length();) {
+            // If characters match, extend the prefix length
+            if (pattern[current] == pattern[prefixLength]) {
+                // Store the length of matching prefix
+                lps[current] = ++prefixLength;
+                current++;
+            }
+            // If characters don't match and we're not at the start of the
+            // pattern
+            else if (prefixLength != 0) {
+                // Backtrack to the previous longest prefix-suffix
+                prefixLength = lps[prefixLength - 1];
+            }
+            // If no match and no prefix to backtrack
+            else {
+                // No prefix-suffix match found
+                lps[current] = 0;
+                current++;
+            }
+        }
+
+        // Return the computed longest prefix-suffix array
+        return lps;
+    }

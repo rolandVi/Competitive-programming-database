@@ -1,0 +1,72 @@
+class TrieNode {
+public:
+    vector<TrieNode*> children;
+    bool isEnd;
+
+    // Constructor
+    TrieNode() : children(26, nullptr), isEnd(false) {}
+};
+
+class Trie {
+private:
+    TrieNode* root;
+
+public:
+    // Constructor
+    Trie() : root(new TrieNode()) {}
+
+    // Insert a word into the Trie
+    void insert(const string& word) {
+        TrieNode* cur = root;
+        for (char c : word) {
+            int idx = c - 'a';
+            if (cur->children[idx] == nullptr) {
+                cur->children[idx] = new TrieNode();
+            }
+            cur = cur->children[idx];
+        }
+        cur->isEnd = true;
+    }
+
+    // Search for a word in the Trie
+    bool search(const string& word) {
+        TrieNode* cur = root;
+        for (char c : word) {
+            int idx = c - 'a';
+            if (cur->children[idx] == nullptr) {
+                return false;
+            }
+            cur = cur->children[idx];
+        }
+        return cur->isEnd;
+    }
+
+    // Check if there is any word in the Trie that starts with the given prefix
+    bool startsWith(const string& prefix) {
+        TrieNode* cur = root;
+        for (char c : prefix) {
+            int idx = c - 'a';
+            if (cur->children[idx] == nullptr) {
+                return false;
+            }
+            cur = cur->children[idx];
+        }
+        return true;
+    }
+
+    // Find the shortest prefix of the word in the Trie
+    string shortestPrefixWord(const string& word) {
+        TrieNode* current = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word[i];
+            if (current->children[c - 'a'] == nullptr) {
+                return word;
+            }
+            current = current->children[c - 'a'];
+            if (current->isEnd) {
+                return word.substr(0, i + 1);
+            }
+        }
+        return word;
+    }
+};

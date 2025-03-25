@@ -1,0 +1,47 @@
+class Solution {
+public:
+    vector<vector<int>> validArrangement(vector<vector<int>>& pairs) {
+        unordered_map<int, int> in;
+        unordered_map<int, int> out;
+        unordered_map<int, vector<int>> adj;
+        for (const auto& edge : pairs){
+            int a = edge[0];
+            int b = edge[1];
+            in[b]++;
+            out[a]++;
+            adj[a].push_back(b);
+        }
+        int start = pairs[0][0];
+        for (const auto& pair : out){
+            int key = pair.first;
+            if (out[key] == in[key] + 1){
+                start = key;
+                break;
+            }
+        }
+
+        stack<int> curpath;
+        vector<int> revpath;
+        curpath.push(start);
+
+        while (!curpath.empty()){
+            int cur = curpath.top();
+            if(out[cur]){
+                int next = adj[cur].back();
+                out[cur]--;
+                adj[cur].pop_back();
+                curpath.push(next);
+            } else {
+                revpath.push_back(cur);
+                curpath.pop();
+            }
+        }
+    
+        vector<vector<int>> sol;
+        int n = revpath.size();
+        for (int i=n-1; i>=1; i--){
+            sol.push_back({revpath[i], revpath[i-1]});
+        }
+        return sol;
+    }
+};

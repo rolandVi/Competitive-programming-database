@@ -1,0 +1,109 @@
+class UnionFind {
+private:
+    vector<int> component;
+    vector<int> rank;
+    int disComponents;
+
+public:
+    UnionFind(int n) : component(n), rank(n, 0), disComponents(n) {
+        for (int i = 0; i < n; ++i) {
+            component[i] = i;
+        }
+    }
+
+    int find(int a) {
+        if (component[a] != a) {
+            component[a] = find(component[a]);
+        }
+        return component[a];
+    }
+
+    bool unite(int a, int b) {
+        int rootA = find(a);
+        int rootB = find(b);
+
+        if (rootA != rootB) {
+            if (rank[rootA] > rank[rootB]) {
+                component[rootB] = rootA;
+            } else if (rank[rootA] < rank[rootB]) {
+                component[rootA] = rootB;
+            } else {
+                component[rootB] = rootA;
+                rank[rootA]++;
+            }
+            disComponents--;
+            return true;
+        }
+        return false;
+    }
+
+    int size() const {
+        return disComponents;
+    }
+};
+
+
+class UnionFind {
+private:
+    vector<int> parent;
+    vector<int> value;
+    vector<int> rank;
+    int disComponents;
+
+public:
+    UnionFind(int n) : parent(n), value(n), rank(n, 0), disComponents(n) {
+        int big = (1 << 20) - 1;
+        for (int i = 0; i < n; ++i) {
+            parent[i] = i;
+            value[i] = big;
+        }
+    }
+    
+    int val(int a) {
+        return value[a];
+    }
+
+    int find(int a) {
+        if (parent[a] != a) {
+            int root = find(parent[a]);
+            value[a] &= value[parent[a]];
+            parent[a] = root;
+        }
+        return parent[a];
+    }
+
+    bool unite(int a, int b, int w) {
+        int rootA = find(a);
+        int rootB = find(b);
+
+        if (rootA != rootB) {
+            int newWeight = value[rootA] & value[rootB] & w;
+            if (rank[rootA] > rank[rootB]) {
+                parent[rootB] = rootA;
+                value[rootA] = newWeight;
+            } else if (rank[rootA] < rank[rootB]) {
+                parent[rootA] = rootB;
+                value[rootB] = newWeight;
+            } else {
+                parent[rootB] = rootA;
+                value[rootA] = newWeight;
+                rank[rootA]++;
+            }
+            disComponents--;
+            return true;
+        }
+
+        int root = rootA;
+        value[root] &= w;
+        return false;
+    }
+
+    int getValue(int a) {
+        int root = find(a);
+        return value[root];
+    }
+
+    int size() const {
+        return disComponents;
+    }
+};

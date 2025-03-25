@@ -1,0 +1,40 @@
+public:
+    int longestCycle(const vector<vector<int>>& adjList) {
+        int n = adjList.size(); // Number of nodes in the graph
+        vector<int> visited(n, 0); // 0 = unvisited, 1 = visiting, 2 = processed
+        int longest = -1; // Variable to store the longest cycle length
+
+        // Iterate over all nodes
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == 0) {
+                unordered_map<int, int> entryTime;
+                dfs(i, 0, adjList, visited, entryTime, longest);
+            }
+        }
+
+        return longest;
+    }
+
+private:
+    void dfs(int node, int time, const vector<vector<int>>& adjList, vector<int>& visited, 
+             unordered_map<int, int>& entryTime, int& longest) {
+        // Mark the node as visiting
+        visited[node] = 1;
+        entryTime[node] = time;
+
+        // Traverse all neighbors of the current node
+        for (int neighbor : adjList[node]) {
+            if (visited[neighbor] == 0) { // Unvisited node
+                dfs(neighbor, time + 1, adjList, visited, entryTime, longest);
+            } else if (visited[neighbor] == 1) { // Back edge detected
+                if (entryTime.count(neighbor)) {
+                    // Calculate cycle length
+                    longest = max(longest, time - entryTime[neighbor] + 1);
+                }
+            }
+        }
+
+        // Mark the node as processed
+        visited[node] = 2;
+        entryTime.erase(node);
+    }
