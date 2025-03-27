@@ -9,4 +9,5 @@ add_executable(Competitive_programming_database
     LeetCode/Daily/Count_the_Number_of_Complete_Components.cpp
     LeetCode/Daily/Find_All_Possible_Recipes_from_Given_Supplies.cpp
     LeetCode/Daily/Number_of_Ways_to_Arrive_at_Destination.cpp
+        LeetCode/Daily/Minimum_Index_of_a_Valid_Split.cpp
 )
