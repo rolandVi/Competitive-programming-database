@@ -10,4 +10,5 @@ add_executable(Competitive_programming_database
     LeetCode/Daily/Find_All_Possible_Recipes_from_Given_Supplies.cpp
     LeetCode/Daily/Number_of_Ways_to_Arrive_at_Destination.cpp
         LeetCode/Daily/Minimum_Index_of_a_Valid_Split.cpp
+        LeetCode/Daily/Minimum_Cost_to_Divide_Array_Into_Subarrays.cpp
 )
