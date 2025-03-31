@@ -11,4 +11,5 @@ add_executable(Competitive_programming_database
     LeetCode/Daily/Number_of_Ways_to_Arrive_at_Destination.cpp
         LeetCode/Daily/Minimum_Index_of_a_Valid_Split.cpp
         LeetCode/Daily/Minimum_Cost_to_Divide_Array_Into_Subarrays.cpp
+        LeetCode/Daily/Put_Marbles_in_Bags.cpp
 )
