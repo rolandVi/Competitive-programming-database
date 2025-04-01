@@ -12,4 +12,5 @@ add_executable(Competitive_programming_database
         LeetCode/Daily/Minimum_Index_of_a_Valid_Split.cpp
         LeetCode/Daily/Minimum_Cost_to_Divide_Array_Into_Subarrays.cpp
         LeetCode/Daily/Put_Marbles_in_Bags.cpp
+        LeetCode/Daily/Solving_Questions_With_Brainpower.cpp
 )
