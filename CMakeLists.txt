@@ -14,4 +14,5 @@ add_executable(Competitive_programming_database
         LeetCode/Daily/Put_Marbles_in_Bags.cpp
         LeetCode/Daily/Solving_Questions_With_Brainpower.cpp
         LeetCode/Daily/Largest_Divisible_Subse.cpp
+        LeetCode/Daily/Coun_Symmetric_Integers.cpp
 )
