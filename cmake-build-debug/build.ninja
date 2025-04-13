@@ -115,6 +115,12 @@ build CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Coun_Symmet
   OBJECT_DIR = CMakeFiles\Competitive_programming_database.dir
   OBJECT_FILE_DIR = CMakeFiles\Competitive_programming_database.dir\LeetCode\Daily
 
+build CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Count_Good_Numbers.cpp.obj: CXX_COMPILER__Competitive_programming_database_unscanned_Debug C$:/Users/rolik/Documents/Programming/Competitive-programming-database/LeetCode/Daily/Count_Good_Numbers.cpp || cmake_object_order_depends_target_Competitive_programming_database
+  DEP_FILE = CMakeFiles\Competitive_programming_database.dir\LeetCode\Daily\Count_Good_Numbers.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Competitive_programming_database.dir
+  OBJECT_FILE_DIR = CMakeFiles\Competitive_programming_database.dir\LeetCode\Daily
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Competitive_programming_database
@@ -123,7 +129,7 @@ build CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Coun_Symmet
 #############################################
 # Link the executable Competitive_programming_database.exe
 
-build Competitive_programming_database.exe: CXX_EXECUTABLE_LINKER__Competitive_programming_database_Debug CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Check_if_Grid_can_be_Cut_into_Sections.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Count_Days_Without_Meetings.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Count_the_Number_of_Complete_Components.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Find_All_Possible_Recipes_from_Given_Supplies.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Number_of_Ways_to_Arrive_at_Destination.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Minimum_Index_of_a_Valid_Split.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Minimum_Cost_to_Divide_Array_Into_Subarrays.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Put_Marbles_in_Bags.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Solving_Questions_With_Brainpower.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Largest_Divisible_Subse.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Coun_Symmetric_Integers.cpp.obj
+build Competitive_programming_database.exe: CXX_EXECUTABLE_LINKER__Competitive_programming_database_Debug CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Check_if_Grid_can_be_Cut_into_Sections.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Count_Days_Without_Meetings.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Count_the_Number_of_Complete_Components.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Find_All_Possible_Recipes_from_Given_Supplies.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Number_of_Ways_to_Arrive_at_Destination.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Minimum_Index_of_a_Valid_Split.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Minimum_Cost_to_Divide_Array_Into_Subarrays.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Put_Marbles_in_Bags.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Solving_Questions_With_Brainpower.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Largest_Divisible_Subse.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Coun_Symmetric_Integers.cpp.obj CMakeFiles/Competitive_programming_database.dir/LeetCode/Daily/Count_Good_Numbers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Competitive_programming_database.dir
