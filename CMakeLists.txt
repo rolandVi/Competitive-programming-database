@@ -16,4 +16,5 @@ add_executable(Competitive_programming_database
         LeetCode/Daily/Largest_Divisible_Subse.cpp
         LeetCode/Daily/Coun_Symmetric_Integers.cpp
         LeetCode/Daily/Count_Good_Numbers.cpp
+        "LeetCode/Daily/Rabbits in Forest.cpp"
 )
