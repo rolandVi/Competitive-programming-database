@@ -17,4 +17,5 @@ add_executable(Competitive_programming_database
         LeetCode/Daily/Coun_Symmetric_Integers.cpp
         LeetCode/Daily/Count_Good_Numbers.cpp
         "LeetCode/Daily/Rabbits in Forest.cpp"
+        LeetCode/Daily/Count_the_Hidden_Sequences.cpp
 )

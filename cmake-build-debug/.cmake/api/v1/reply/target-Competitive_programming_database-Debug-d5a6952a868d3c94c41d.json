@@ -64,7 +64,8 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13
 			]
 		}
 	],
@@ -113,7 +114,8 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13
 			]
 		}
 	],
@@ -195,6 +197,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "LeetCode/Daily/Rabbits in Forest.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "LeetCode/Daily/Count_the_Hidden_Sequences.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
