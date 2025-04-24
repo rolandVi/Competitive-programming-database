@@ -19,4 +19,5 @@ add_executable(Competitive_programming_database
         "LeetCode/Daily/Rabbits in Forest.cpp"
         LeetCode/Daily/Count_the_Hidden_Sequences.cpp
         LeetCode/Daily/Combinatorics_primes.cpp
+        LeetCode/Daily/Count_Complete_Subarrays_in_an_Array.cpp
 )
