@@ -21,4 +21,5 @@ add_executable(Competitive_programming_database
         LeetCode/Daily/Combinatorics_primes.cpp
         LeetCode/Daily/Count_Complete_Subarrays_in_an_Array.cpp
         "LeetCode/Daily/Count Subarrays Where_Max_Element_Appears_at_Least_K_Times.cpp"
+        LeetCode/Daily/Domino_and_Tromino_Tiling.cpp
 )
